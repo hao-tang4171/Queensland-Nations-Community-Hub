@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories — Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/pages/sandbox_typography.css">
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="content.html" aria-current="page">Stories</a>
+                <a href="#">Events</a>
+                <a href="#">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+
+        <section class="demo-section">
+            <h1>Community Stories</h1>
+            <p>Explore stories shared by members of the Queensland First Nations community.</p>
+        </section>
+
+
+
+        <section class="demo-section">
+
+            <div id="filter-bar" class="filter-bar">
+                <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="story">Story</button>
+                <button class="filter-btn" data-filter="event">Blog</button>
+                <button class="filter-btn" data-filter="notice">Other</button>
+            </div>
+
+
+            <div id="status" class="status-message" aria-live="polite"></div>
+
+
+            <div id="content-list" class="content-grid"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland First Nations Community Hub</p>
+            <p><small>© 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+
+    <script type="module" src="js/pages/content.js"></script>
+
+</body>
+
+</html>

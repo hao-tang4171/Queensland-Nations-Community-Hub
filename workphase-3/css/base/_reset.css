@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* Header */
+.site-header {
+    background-color: #F2F0E8;
+    border-bottom: 2px solid var(--color-primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.site-header__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header__logo {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+}
+
+.site-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-header__nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-header__nav a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .site-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Demo sections */
+.demo-section {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--color-bg-medium);
+    padding-bottom: 2rem;
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* Lists */
+.list {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Callout panel */
+.callout {
+    background-color: var(--color-medium);
+    border-left: 4px solid var(--color-primary);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.callout h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+}
+
+.site-footer__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.site-footer p {
+    color: var(--color-bg-light);
+    margin-bottom: 0.5rem;
+}

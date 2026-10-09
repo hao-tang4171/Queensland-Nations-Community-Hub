@@ -1,0 +1,116 @@
+/* ================================
+   Form Component — _form.css
+   注意：.form-card 
+================================ */
+
+.form-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: transparent;
+}
+
+
+.form-card {
+    width: 100%;
+    max-width: 480px;
+   
+}
+
+
+.form-card__title {
+    font-size: var(--size-h2);
+    color: var(--color-primary);
+    margin-bottom: 0.4rem;
+    line-height: var(--line-height-heading);
+}
+
+.form-card__subtitle {
+    font-size: var(--size-small);
+    color: var(--color-text);
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+/* 表单组 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: rgba(255, 255, 255, 0.60);
+    border: 1.5px solid rgba(255, 255, 255, 0.70);
+    border-radius: 0.5rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.form-group input[type="file"] {
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(153, 75, 45, 0.15);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23994B2D' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    padding-right: 2.2rem;
+    cursor: pointer;
+}
+
+
+.form-required { color: var(--color-primary); margin-left: 0.1em; }
+.form-optional { font-weight: 400; font-size: 0.8rem; color: var(--color-text); opacity: 0.6; margin-left: 0.2em; }
+
+
+.form-hint { font-size: 0.8rem; color: var(--color-text); opacity: 0.6; }
+
+
+.form-group--hidden { display: none; }
+
+
+.field-error { font-size: 0.8rem; color: var(--color-primary); min-height: 1.1rem; }
+
+
+#form-message { margin-top: 1rem; font-size: 0.9rem; text-align: center; min-height: 1.4rem; }
+.form-message--error { color: var(--color-primary); }
+.form-message--success { color: #3a7d44; }

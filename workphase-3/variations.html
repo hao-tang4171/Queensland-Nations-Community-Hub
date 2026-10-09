@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variations — Design System Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/variations.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="extension.html">Stories</a>
+                <a href="form.html">Submit</a>
+                <a href="dynamic.html" aria-current="page">Community Posts</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About</a>
+                <a href="variations.html">Variations</a>
+                <a href="reflection.html" aria-current="page">Reflection</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <div class="page-intro">
+            <h1>Design System &amp; Variations</h1>
+            <p>This page documents the visual language of the Community Hub: the design tokens, reusable components, and
+                the key decisions made while developing them.</p>
+        </div>
+
+        <section class="spec-section">
+            <h2>1. Colour Tokens</h2>
+            <p>A warm, earthy palette chosen to reflect the natural, traditional character of the cultures the platform
+                serves.</p>
+            <div class="token-colors">
+                <div class="token-color">
+                    <div class="token-color__swatch" style="background:#994B2D;"></div>
+                    <div class="token-color__info">
+                        <span class="token-color__name">Terracotta</span>
+                        <span class="token-color__hex">#994B2D</span>
+                        <span class="token-color__use">Primary — headings, links, accents</span>
+                    </div>
+                </div>
+                <div class="token-color">
+                    <div class="token-color__swatch" style="background:#B6965B;"></div>
+                    <div class="token-color__info">
+                        <span class="token-color__name">Ochre</span>
+                        <span class="token-color__hex">#B6965B</span>
+                        <span class="token-color__use">Secondary — supporting accents</span>
+                    </div>
+                </div>
+                <div class="token-color">
+                    <div class="token-color__swatch" style="background:#F2F0E8;"></div>
+                    <div class="token-color__info">
+                        <span class="token-color__name">Light Sand</span>
+                        <span class="token-color__hex">#F2F0E8</span>
+                        <span class="token-color__use">Background base</span>
+                    </div>
+                </div>
+                <div class="token-color">
+                    <div class="token-color__swatch" style="background:#EFE8E2;"></div>
+                    <div class="token-color__info">
+                        <span class="token-color__name">Soft Sand</span>
+                        <span class="token-color__hex">#EFE8E2</span>
+                        <span class="token-color__use">Background variation</span>
+                    </div>
+                </div>
+                <div class="token-color">
+                    <div class="token-color__swatch" style="background:#3D352D;"></div>
+                    <div class="token-color__info">
+                        <span class="token-color__name">Bark</span>
+                        <span class="token-color__hex">#3D352D</span>
+                        <span class="token-color__use">Body text</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="spec-section">
+            <h2>2. Typography Tokens</h2>
+            <p>The site uses <strong>Quicksand</strong> (with Noto Sans as fallback) — a rounded, gentle typeface that
+                matches the warm tone of the brand.</p>
+            <div class="card token-type">
+                <h1>Heading 1 — Welcome to Country</h1>
+                <h2>Heading 2 — Community Stories &amp; Culture</h2>
+                <h3>Heading 3 — Upcoming Cultural Events</h3>
+                <p>Body text — This community hub exists to connect, celebrate, and preserve the rich cultures of
+                    Queensland's First Nations peoples.</p>
+                <p><small>font-family: "Quicksand", "Noto Sans", sans-serif;</small></p>
+            </div>
+        </section>
+
+
+        <section class="spec-section">
+            <h2>3. Component Showcase</h2>
+
+            <h3>Glass Card</h3>
+            <div class="demo-block">
+                <div class="card">
+                    <p>The base <strong>.card</strong> component — a glassmorphism panel with a blurred translucent
+                        background, used site-wide to hold content.</p>
+                </div>
+            </div>
+
+            <h3>Accent Card</h3>
+            <div class="demo-block">
+                <div class="card card--accent">
+                    <p>The <strong>.card--accent</strong> variant adds a terracotta left border, used to emphasise
+                        notices such as the Acknowledgement of Country.</p>
+                </div>
+            </div>
+
+            <h3>Callout Panel</h3>
+            <div class="demo-block">
+                <div class="card callout">
+                    <h3>Community Notice</h3>
+                    <p>The Annual Cultural Gathering will be held at Musgrave Park, Brisbane. All community members and
+                        allies are welcome.</p>
+                    <a href="#">Learn more →</a>
+                </div>
+            </div>
+
+            <h3>Lists</h3>
+            <div class="card demo-block">
+                <ul class="list">
+                    <li>Cultural events and gatherings</li>
+                    <li>Community stories and oral histories</li>
+                    <li>Language preservation resources</li>
+                </ul>
+            </div>
+
+            <h3>Metadata / Small Text</h3>
+            <div class="card demo-block">
+                <p>Community Story: The River and the Dreaming</p>
+                <small>Posted by a community member · Yuggera Country</small>
+            </div>
+        </section>
+
+
+        <section class="spec-section">
+            <h2>4. Design Decisions &amp; Iterations</h2>
+            <p>Each component below records a real design problem, the options considered, and why the final choice was
+                made.</p>
+
+            <article class="card iteration">
+                <h3>Decision 1 — Glass Card Opacity</h3>
+
+                <p class="iteration__label">The tension</p>
+                <p>The glass card sits on top of a soft diffuse-light background. If the card is too transparent, the
+                    background shows through and reduces text readability. If it is too opaque, it loses the
+                    glassmorphism effect that defines the brand.</p>
+
+                <p class="iteration__label">Iteration</p>
+                <div class="opacity-demo">
+                    <div>
+                        <div class="opacity-demo__sample opacity-demo__sample--old">
+                            <strong>Earlier version</strong>
+                            <p>Text on a very translucent card.</p>
+                        </div>
+                        <p class="opacity-demo__caption">rgba(255,252,247, 0.45) — too see-through</p>
+                    </div>
+                    <div>
+                        <div class="opacity-demo__sample opacity-demo__sample--new">
+                            <strong>Current version</strong>
+                            <p>Text on a clearer card.</p>
+                        </div>
+                        <p class="opacity-demo__caption">rgba(255,252,247, 0.72) — readable, still glassy</p>
+                    </div>
+                </div>
+
+                <p class="iteration__label">Outcome</p>
+                <p>Raised the card background opacity from 0.45 to 0.72. This kept the frosted-glass character while
+                    ensuring body text stays legible over the busy background.</p>
+            </article>
+
+
+            <article class="card iteration">
+                <h3>Decision 2 — Where to Apply the Diffuse Background</h3>
+
+                <p class="iteration__label">The tension</p>
+                <p>The diffuse-light gradient background needed to cover the full page. Applying it to
+                    <strong>body</strong> caused a problem: a full-height wrapper (the form wrapper) sat on top of
+                    <strong>body</strong> and covered the background, so the gradient was hidden.</p>
+
+                <p class="iteration__label">Options considered</p>
+                <div class="option option--rejected">
+                    <span class="option__tag">Rejected</span>
+                    <p>Apply the background to <strong>body</strong> — covered by the page wrapper, gradient not
+                        visible.</p>
+                </div>
+                <div class="option option--chosen">
+                    <span class="option__tag">Chosen</span>
+                    <p>Apply the background to <strong>html</strong> — sits behind everything, so the gradient always
+                        shows through regardless of wrappers above it.</p>
+                </div>
+
+                <p class="iteration__label">Outcome</p>
+                <p>The diffuse background is defined on the <strong>html</strong> element. This guarantees a consistent
+                    atmosphere across every page without any element accidentally hiding it.</p>
+            </article>
+
+
+            <article class="card iteration">
+                <h3>Decision 3 — Audio With Text Transcripts</h3>
+
+                <p class="iteration__label">The tension</p>
+                <p>Adding audio narration enriches the storytelling and suits a platform about oral cultural heritage.
+                    But audio alone excludes users who are deaf or hard of hearing, and is unusable in sound-sensitive
+                    settings such as a quiet library or a shared space without headphones.</p>
+
+                <p class="iteration__label">Options considered</p>
+                <div class="option option--rejected">
+                    <span class="option__tag">Rejected</span>
+                    <p><strong>Audio only</strong> — richest for hearing users, but inaccessible to others.</p>
+                </div>
+                <div class="option option--rejected">
+                    <span class="option__tag">Rejected</span>
+                    <p><strong>Text only</strong> — fully accessible, but loses the warmth and presence of a spoken
+                        voice.</p>
+                </div>
+                <div class="option option--chosen">
+                    <span class="option__tag">Chosen</span>
+                    <p><strong>Audio paired with full written text</strong> — every recording is shown alongside its
+                        complete text on the same card, so both groups of users are served.</p>
+                </div>
+
+                <p class="iteration__label">Why this works</p>
+                <p>Each story's full written text sits on the card next to its audio player, so screen readers can reach
+                    it and people can read instead of listen, while hearing users still get the richer audio. Rather
+                    than trading accessibility against richness, this serves both — an example of the <em>curb-cut
+                        effect</em>, where a feature built for accessibility improves the experience for everyone.</p>
+
+                <p class="iteration__label">Refinements</p>
+                <ul>
+                    <li>Audio does not autoplay — avoids startling users and respects quiet settings.</li>
+                    <li><strong>preload="none"</strong> keeps the page light on mobile data.</li>
+                    <li>Each story's written text is shown in full alongside its audio, so the words are always
+                        available to read, not hidden behind an extra step.</li>
+                </ul>
+            </article>
+
+        </section>
+
+
+        <section class="spec-section">
+            <h2>5. Technical &amp; Structural Decisions</h2>
+            <p>Beyond visual styling, several structural choices shaped how the site behaves and how easily it can grow.
+            </p>
+
+            <article class="card iteration">
+                <h3>Separating Content from Code</h3>
+                <p class="iteration__label">The decision</p>
+                <p>The cultural narratives are not written directly into the HTML. They live in a single data file
+                    (<strong>narratives.json</strong>), and JavaScript reads that file and builds the cards on the page.
+                </p>
+                <p class="iteration__label">Why</p>
+                <p>This keeps content and code separate. Adding or editing a story means changing one data file, with no
+                    need to touch the HTML or JavaScript. It also means the homepage "Latest Stories" preview and the
+                    full Stories page draw from the same source, so they can never fall out of sync.</p>
+            </article>
+
+            <article class="card iteration">
+                <h3>Subscription as a Modal, Not a Whole Page</h3>
+                <p class="iteration__label">The change</p>
+                <p>In A2 the homepage was essentially a single subscription form. In A3 the homepage became a richer
+                    landing page — a hero, community introduction, navigation cards, a story preview, and a
+                    cultural-knowledge section — and the subscription form moved into a modal dialog opened by a button.
+                </p>
+                <p class="iteration__label">Why</p>
+                <p>This lets the homepage do its real job — welcoming people and pointing them into the community —
+                    while subscribing becomes an action taken on demand rather than the first and only thing on the
+                    page.</p>
+                <p class="iteration__label">How</p>
+                <p>The modal uses the native <strong>&lt;dialog&gt;</strong> element, which provides accessibility for
+                    free: focus moves into the form on open, the Escape key closes it, and focus returns to the button
+                    that opened it. The same dialog pattern is reused on the Events page for the "Join Us" button.</p>
+            </article>
+
+            <article class="card iteration">
+                <h3>Reusing Components Across Pages</h3>
+                <p class="iteration__label">The decision</p>
+                <p>The glass card, diffuse background, header, footer, and subscription dialog are shared conventions
+                    used across every page, each page importing only the components it needs.</p>
+                <p class="iteration__label">Why</p>
+                <p>Consistency makes the site feel like one place rather than a set of separate pages, and reusing
+                    components keeps the code easier to maintain.</p>
+            </article>
+        </section>
+
+
+        <section class="spec-section">
+            <h2>6. Cultural Responsibility &amp; Respect</h2>
+            <p>Because this site is about First Nations culture, several decisions were made specifically to treat that
+                culture with care. These choices matter as much as the visual design.</p>
+
+            <article class="card iteration">
+                <h3>Why We Use Demonstration Content, Not Real Cultural Material</h3>
+                <p>This project does not use real Aboriginal or Torres Strait Islander cultural material. This is a
+                    deliberate choice for two reasons. First, we have not obtained permission to use such material — and
+                    cultural knowledge should only be used with the consent of the communities it belongs to. Second, we
+                    have not yet carried out the careful verification that real cultural material would require, and
+                    presenting unverified material as authentic would risk spreading misinformation.</p>
+                <p>Instead, all narratives on this site are fictional and created for demonstration. Where they refer to
+                    real institutions (such as AIATSIS or the Queensland Museum) or real principles (such as FPIC and
+                    ICIP), each narrative clearly notes what is real and what is invented. This lets the project
+                    demonstrate its features while respecting that real cultural material is not ours to use without
+                    permission and proper care.</p>
+            </article>
+
+            <article class="card iteration">
+                <h3>Protecting Knowledge Can Mean Not Publishing It</h3>
+                <p>One narrative deals with a traditional story that belongs to a particular group and is not meant to
+                    be shared with outsiders. Rather than writing the story down, it records only that the story exists,
+                    who it belongs to, and who is responsible for it — never its content. This reflects an important
+                    idea: protecting culture does not always mean making it public. Sometimes the most respectful choice
+                    is to preserve something while keeping it within a community.</p>
+            </article>
+
+            <article class="card iteration">
+                <h3>Asking Before Recording</h3>
+                <p>Another narrative shows a visitor who wants to record a performance but waits, asks the performers
+                    for permission, and only records once they agree. This models the principle of consent (FPIC) in an
+                    everyday situation, rather than treating cultural expression as something free to capture.</p>
+            </article>
+
+            <article class="card iteration">
+                <h3>Designing for Everyone</h3>
+                <p>Audio narration is always paired with its full written text, so people who are deaf or hard of
+                    hearing, or who simply cannot play sound, are never excluded. The About page opens with an
+                    Acknowledgement of Country, and the homepage includes a short section explaining the principles
+                    (FPIC, ICIP, and "protect does not always mean publish") that guide how the platform treats cultural
+                    material.</p>
+            </article>
+        </section>
+
+
+        <section class="spec-section">
+            <h2>7. From A2 to A3</h2>
+            <p>A3 builds directly on the design system established in A2, keeping its foundations while extending its
+                purpose.</p>
+
+            <article class="card iteration">
+                <h3>What Carried Over</h3>
+                <p>The colour palette (terracotta, ochre, sand), the Quicksand typeface, the glass-card component, the
+                    diffuse-light background, and the warm, traditional tone all come from A2 and remain unchanged. The
+                    target audience — local residents, community members, and people interested in First Nations culture
+                    — is also the same.</p>
+            </article>
+
+            <article class="card iteration">
+                <h3>What A3 Added</h3>
+                <p>A3 turned a small set of pages into a fuller site: a redesigned homepage with a full-screen hero and
+                    a subscription modal; a content submission form; an Events page; an About page; and a new extension
+                    — a Stories page that presents audio and visual narratives about protecting culture, driven by a
+                    shared data file. The design language stayed the same; what grew was the depth of content and the
+                    care taken around cultural responsibility.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland Nations Community Hub</p>
+            <p><small>© 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

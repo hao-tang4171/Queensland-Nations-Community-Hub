@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form & Card Build Review — Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages/sandbox_typography.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Stories</a>
+                <a href="#">Events</a>
+                <a href="#">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="demo-section">
+            <h1>Form &amp; Card Build Review 3</h1>
+            <p><small>This was the bigger task — building the content submission form, the API modules, and the glass-card component. I used Claude to help with the code, but all the design choices and checking were mine.</small></p>
+        </section>
+
+        <section class="demo-section">
+            <h2>How this connects to A2</h2>
+            <ul class="list">
+                <li>I didn't reinvent anything from A2 — same colours, same fonts, same way of laying things out. I just made it work.</li>
+                <li>The glass card builds on the A2 look rather than replacing it. The terracotta and ochre are still doing the heavy lifting, the card just gives them some depth.</li>
+                <li>The submission form is basically the working version of what A2 drew on paper.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>What this task adds beyond A2</h2>
+            <ul class="list">
+                <li>Two forms running in parallel — content submission and the subscription form. I decided to keep both instead of squeezing email into the submission API.</li>
+                <li>A new glass-card component, plus tidied-up form and button styles.</li>
+                <li>Different files now have clearer jobs — one for API requests, one for form data and validation, page-level JS for behaviour.</li>
+                <li>I decided to put Bento Grid on hold until the core stuff was working.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>Accessibility and readability</h2>
+            <p>The frosted-glass card looks nice but it can hurt contrast if the background behind it is busy. I checked that the body text still reads clearly on it. I also made sure the status messages under the form actually announce success or failure — not just change colour, which wouldn't help everyone.</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Decision</h2>
+            <div class="card callout">
+                <p>I used AI like a coding helper, not like a designer. I gave it my A2 and A3 design docs and my existing code so what it produced would actually fit the project. The design calls were all mine — splitting the form into two, going with the gradient background and glass cards instead of something more commercial-looking, putting Bento Grid on hold. AI followed where I pointed it; the direction itself was mine.</p>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Issues found during the build</h2>
+            <ul class="list">
+                <li>Service Worker caching kept showing me old files, so for a while I thought my changes weren't working when they actually were.</li>
+                <li>Styles rendered slightly differently on different pages — same component, but it looked a bit off depending on where you opened it.</li>
+                <li>The gradient background wasn't showing up because the form's container had its own background colour sitting on top of it.</li>
+                <li>Some small mistakes in AI-generated code — wrong file paths, class names that didn't quite match the CSS they were supposed to use.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>Cause and how I verified the fixes</h2>
+            <p>The caching one I sorted by clearing the Service Worker and doing a hard refresh. The background problem turned out to be the wrapper — it had its own background colour covering the gradient. I removed that and moved the gradient up to the root element, so nothing could sit on top of it. The inconsistent styles came down to import order between pages, which I made the same everywhere.</p>
+            <p>For the AI-generated code, I didn't trust any of it on sight. I read every file before saving it, checked each import path by hand, and reloaded the page after every change to see if it actually behaved the way I expected. When something broke, I'd grab a DevTools screenshot and the error, hand it back for the next round of help, then re-test after the fix. That cycle — test, find the problem, fix it, test again — ran several times for some components. Slow, but it meant the final code was something I'd actually looked at and signed off on, not just pasted in and hoped.</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland First Nations Community Hub</p>
+            <p><small>&copy; 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH POST Review — Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages/sandbox_typography.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Stories</a>
+                <a href="#">Events</a>
+                <a href="#">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="demo-section">
+            <h1>FETCH POST Review 2</h1>
+            <p><small>This task was about understanding how a form actually submits to the course API using fetch and POST. I didn't use AI for this one.</small></p>
+        </section>
+
+        <section class="demo-section">
+            <h2>How this connects to A2</h2>
+            <ul class="list">
+                <li>This is the part that makes the A2 subscription form actually do something. Before, it was just a visual mockup.</li>
+                <li>The form fields and styling still match A2 — same fonts, same colours, same feel.</li>
+                <li>Connecting to the API is what turns the page from a static design into a working part of the platform.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>What this task adds beyond A2</h2>
+            <ul class="list">
+                <li>The form actually submits to the course API now — A2 didn't have any of that working.</li>
+                <li>I had to add the bits the API needs: an authentication header, a JSON body, and proper handling of what the server sends back.</li>
+                <li>The form and the API call started to feel like two separate things, which made me think about keeping them in separate files later.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>Feedback and accessibility</h2>
+            <p>If a form submits but doesn't say anything back, the user is left guessing. I added a small status message under the form so people see whether it worked or not. I also disabled the submit button for a moment after clicking, so nobody double-submits by accident.</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Decision</h2>
+            <div class="card callout">
+                <p>I chose not to use AI for this one. I wanted to actually understand how POST and fetch work, not just get to a finished result. So I added each piece step by step, checked what was happening in DevTools, and only moved on once I could see why it was working.</p>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Issues found while implementing</h2>
+            <ul class="list">
+                <li>My first submissions got rejected because I hadn't added the authentication headers properly.</li>
+                <li>I wasn't sure whether the request body should be a plain JS object or a JSON string. It turned out to matter, and I only figured it out by testing.</li>
+                <li>I was handling the response at the wrong step, so my "success" code ran before the server had actually replied.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>Cause and how I verified the fix</h2>
+            <p>Each problem came down to a small gap in what I understood — wrong headers, wrong body format, or the promise chained in the wrong place. I just opened DevTools, looked at the request and response in the Network tab, changed one thing, tested, and kept the change only if it actually worked. I went round this loop several times before the submission went through cleanly. It was slower than just copying a working answer would have been, but I genuinely understand the request now, which I think will pay off when I need to do harder things with the API later.</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland First Nations Community Hub</p>
+            <p><small>&copy; 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>

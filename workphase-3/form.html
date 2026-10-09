@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share with the Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/index.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <div class="card form-card">
+
+            <h2 class="form-card__title">Share with the Community</h2>
+            <p class="form-card__subtitle">
+                Submit a cultural story, blog post, upcoming event, or photo to the Queensland First Nations Community
+                Hub.
+            </p>
+
+            <form id="submission-form" novalidate>
+
+                <!-- title → API: title (required, max 200 chars) -->
+                <div class="form-group">
+                    <label for="title">
+                        Title <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <input id="title" name="title" type="text" maxlength="200" required aria-required="true"
+                        placeholder="Give your submission a title">
+                    <span class="form-hint">Maximum 200 characters</span>
+                </div>
+
+                <!-- content_type → API: content_type (required) -->
+                <div class="form-group">
+                    <label for="content_type">
+                        Content Type <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <select id="content_type" name="content_type" required aria-required="true">
+                        <option value="">Select a type</option>
+                        <option value="story">Story</option>
+                        <option value="blog">Blog</option>
+                        <option value="event">Event</option>
+                        <option value="photo">Photo</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- event_date → API: event_date (conditional, only shown when type = event) -->
+                <div class="form-group form-group--hidden" id="event-date-group" aria-hidden="true">
+                    <label for="event_date">Event Date</label>
+                    <input id="event_date" name="event_date" type="text"
+                        placeholder="e.g. 04/05/2026 or 04/05/2026 14:30" disabled aria-describedby="event-date-hint">
+                    <span class="form-hint" id="event-date-hint">
+                        Australian format: DD/MM/YYYY or DD/MM/YYYY HH:MM
+                    </span>
+                </div>
+
+                <!-- content → API: content (required) -->
+                <div class="form-group">
+                    <label for="content">
+                        Your Submission <span class="form-required" aria-hidden="true">*</span>
+                    </label>
+                    <textarea id="content" name="content" rows="6" required aria-required="true"
+                        placeholder="Share your story, blog post, or event details here…"></textarea>
+                </div>
+
+                <!-- author → API: author (optional, max 100 chars) -->
+                <div class="form-group">
+                    <label for="author">
+                        Your Name <span class="form-optional">(optional)</span>
+                    </label>
+                    <input id="author" name="author" type="text" maxlength="100"
+                        placeholder="Leave blank to submit anonymously">
+                </div>
+
+                <!-- uploaded_image → API: uploaded_image (optional, max 10MB) -->
+                <div class="form-group">
+                    <label for="uploaded_image">
+                        Upload an Image <span class="form-optional">(optional)</span>
+                    </label>
+                    <input id="uploaded_image" name="uploaded_image" type="file" accept="image/*"
+                        aria-describedby="image-hint">
+                    <span class="form-hint" id="image-hint">Maximum file size: 10MB</span>
+                </div>
+
+                <button type="submit" id="submit-button" class="btn-submit">Submit</button>
+
+                <p id="form-message" role="status" aria-live="polite"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./js/pages/form.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Foundations Review — Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages/sandbox_typography.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Stories</a>
+                <a href="#">Events</a>
+                <a href="#">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="demo-section">
+            <h1>API Foundations Review 4</h1>
+            <p><small>Two related tasks in one review — building a reusable API headers module, and then the weather API GET workshop. I did the headers module without AI; for the workshop I used AI to help me clean up a file I'd made messy myself.</small></p>
+        </section>
+
+        <section class="demo-section">
+            <h2>How this connects to A2</h2>
+            <ul class="list">
+                <li>Keeping the JavaScript modular is the same idea as A2's design system — separate things into reusable bits.</li>
+                <li>Making sure users see clear loading and error messages fits A2's accessibility goals.</li>
+                <li>The way I'm handling API access feels like part of the design system, not a separate technical layer.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>What this task adds beyond A2</h2>
+            <ul class="list">
+                <li>A shared headers module, so I don't have to repeat authentication every time I make a request.</li>
+                <li>A working GET request to the weather API, with the data coming back and ready to be rendered.</li>
+                <li>Three deliberate states for any page that loads data — loading, empty, and error — which is a pattern I can reuse anywhere.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>Accessibility</h2>
+            <p>Status messages sit in a visible spot and are announced to assistive tech, so people know whether the data is loading, missing, or failed. Error messages are in plain English rather than raw technical output — they should actually be useful to read.</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Decision</h2>
+            <div class="card callout">
+                <p>For the headers module I chose not to use AI. It was small enough that doing it myself was the better way to really get how the pattern works. For the GET workshop I did use AI, but only after I'd made my main file pretty messy by pasting every tutorial step into one place. Even then, AI didn't decide what to keep — it pointed out the duplication and scope problems, and I made the call about which version was the final one.</p>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Issues found</h2>
+            <ul class="list">
+                <li>Front-end tokens aren't really secure — anyone can see them in the browser. Fine for a course project, but it wouldn't fly in production.</li>
+                <li>My main file ended up with every tutorial step jammed together — duplicate functions, variables used outside their scope, a function that was both imported and re-defined in the same place.</li>
+                <li>Old debugging logs I'd left in from earlier were never cleaned out.</li>
+            </ul>
+        </section>
+
+        <section class="demo-section">
+            <h2>Cause and how I verified the fix</h2>
+            <p>The messy file came from me treating the tutorial steps like code to keep, when really they were just code to learn from. Once I noticed that, the fix was easy — keep only the final working version, delete everything that was just practice.</p>
+            <p>To check the cleaned-up file, I went through it more than once. I watched the console for errors, checked the Network panel to confirm the right headers were being sent, made sure the modular imports and exports were doing what they were supposed to, and clicked through to see that loading, empty, and error states all showed up when they should. I re-ran these checks after every change so I didn't quietly break something while "cleaning". On the security side — yes, putting the API token in front-end code is risky in real life. A real project would need a back end to hide it.</p>
+                <p>The good thing is the modular setup means I won't have to rewrite the headers for every new page, and the three-state pattern is something I can drop into any dynamic content later in A3.</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland First Nations Community Hub</p>
+            <p><small>&copy; 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events — Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/events.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="extension.html">Stories</a>
+                <a href="form.html">Submit</a>
+                <a href="dynamic.html" aria-current="page">Community Posts</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About</a>
+                <a href="variations.html">Variations</a>
+                <a href="reflection.html" aria-current="page">Reflection</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="events-intro">
+            <h1>Upcoming Events</h1>
+            <p>Join the community to celebrate, learn, and connect.</p>
+        </section>
+
+        <div class="event-wrapper">
+            <article class="card event-card">
+                <img class="event-card__image" src="images/event-dance.png"
+                    alt="Community members learning a traditional First Nations dance together outdoors.">
+                <p class="event-card__meta">Saturday · Musgrave Park, Brisbane</p>
+                <h2 class="event-card__title">Learn a Traditional Dance to Celebrate the Festival</h2>
+                <p class="event-card__desc">
+                    Come and learn a traditional First Nations dance as part of our festival celebrations.
+                    Led by community dancers, this is a welcoming session for all ages and experience levels —
+                    a chance to move together, share in the celebration, and honour culture through dance.
+                    No experience needed; just bring an open heart.
+                </p>
+                <button type="button" class="event-card__join" id="join-open">Join Us</button>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland Nations Community Hub</p>
+            <p><small>&copy; 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+    <dialog class="subscribe-dialog" id="subscribe-dialog" aria-labelledby="subscribe-title">
+        <div class="card subscribe-dialog__card">
+            <button type="button" class="subscribe-dialog__close" id="subscribe-close"
+                aria-label="Close subscription form">&times;</button>
+
+            <h2 class="form-card__title" id="subscribe-title">Join the Community</h2>
+            <p class="form-card__subtitle">Subscribe to receive updates about this and future events.</p>
+
+            <form id="newsletter-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="frequency">Newsletter frequency</label>
+                    <select id="frequency" name="frequency" required>
+                        <option value="">Select a frequency</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit-button" class="btn-submit">Subscribe</button>
+
+                <p id="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </dialog>
+
+    <script type="module" src="js/pages/events.js"></script>
+</body>
+
+</html>

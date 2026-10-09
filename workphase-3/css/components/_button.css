@@ -1,0 +1,46 @@
+/* ================================
+   Button Component — _button.css
+================================ */
+
+.btn-submit {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    margin-top: 0.5rem;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #7d3a20;
+    box-shadow: 0 4px 12px rgba(153, 75, 45, 0.35);
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: none;
+    background-color: #6a3019;
+}
+
+.btn-submit:focus-visible {
+    outline: 3px solid rgba(153, 75, 45, 0.5);
+    outline-offset: 3px;
+}
+
+.btn-submit:disabled {
+    background-color: #c4a08e;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}

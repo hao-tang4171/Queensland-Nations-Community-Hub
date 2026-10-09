@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/index.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="extension.html">Stories</a>
+                <a href="form.html">Submit</a>
+                <a href="dynamic.html" aria-current="page">Community Posts</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About</a>
+                <a href="variations.html">Variations</a>
+                <a href="reflection.html" aria-current="page">Reflection</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero__inner">
+                <p class="hero__welcome">Welcome to Country</p>
+                <h1 class="hero__title">A space to share, celebrate, and protect culture</h1>
+                <p class="hero__text">Connecting the communities of Queensland's First Nations peoples through stories,
+                    events, and shared knowledge.</p>
+                <button type="button" class="hero__cta" id="subscribe-open-hero">Subscribe to community updates</button>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="card intro-card">
+                <p>The Queensland Nations Community Hub is a non-profit platform for connection, information sharing,
+                    and cultural preservation across diverse Indigenous communities in Queensland.</p>
+                <p>It is a space to honour deep and enduring connections to Country — to share community news, celebrate
+                    cultural events, and hear voices across generations.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section__title">Explore the Hub</h2>
+            <p class="section__subtitle">Find your way into the community.</p>
+            <div class="nav-cards">
+                <a class="card card--interactive nav-card" href="extension.html">
+                    <h3 class="nav-card__title">Stories</h3>
+                    <p class="nav-card__text">Listen to audio and visual narratives about remembering and protecting
+                        culture.</p>
+                    <span class="nav-card__more">Listen →</span>
+                </a>
+                <a class="card card--interactive nav-card" href="form.html">
+                    <h3 class="nav-card__title">Submit</h3>
+                    <p class="nav-card__text">Share an event, photo, blog, or story with the community.</p>
+                    <span class="nav-card__more">Contribute →</span>
+                </a>
+                <a class="card card--interactive nav-card" href="events.html">
+                    <h3 class="nav-card__title">Events</h3>
+                    <p class="nav-card__text">Find upcoming cultural gatherings and activities near you.</p>
+                    <span class="nav-card__more">See events →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section" id="story-preview-section">
+            <h2 class="section__title">Latest Stories</h2>
+            <p class="section__subtitle">A few recent narratives from the community archive.</p>
+            <div class="story-grid" id="story-preview"></div>
+        </section>
+
+        <section class="section">
+            <h2 class="section__title">Caring for Cultural Knowledge</h2>
+            <p class="section__subtitle">A few principles that guide how this platform treats cultural material.</p>
+            <div class="edu-grid">
+                <div class="card edu-card">
+                    <h3 class="edu-card__term">FPIC</h3>
+                    <p class="edu-card__text">Free, Prior and Informed Consent — material is only shared when the person
+                        whose story it is has agreed, knowing where it will go.</p>
+                </div>
+                <div class="card edu-card">
+                    <h3 class="edu-card__term">ICIP</h3>
+                    <p class="edu-card__text">Indigenous Cultural and Intellectual Property — cultural knowledge belongs
+                        to the communities it comes from.</p>
+                </div>
+                <div class="card edu-card">
+                    <h3 class="edu-card__term">Protect ≠ Publish</h3>
+                    <p class="edu-card__text">Protecting culture does not always mean making it public. Sometimes the
+                        respectful choice is to preserve it privately.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland Nations Community Hub</p>
+            <p><small>&copy; 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+
+    <dialog class="subscribe-dialog" id="subscribe-dialog" aria-labelledby="subscribe-title">
+        <div class="card subscribe-dialog__card">
+            <button type="button" class="subscribe-dialog__close" id="subscribe-close"
+                aria-label="Close subscription form">&times;</button>
+
+            <h2 class="form-card__title" id="subscribe-title">Stay Connected</h2>
+            <p class="form-card__subtitle">Subscribe to receive community updates.</p>
+
+            <form id="newsletter-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="frequency">Newsletter frequency</label>
+                    <select id="frequency" name="frequency" required>
+                        <option value="">Select a frequency</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit-button" class="btn-submit">Subscribe</button>
+
+                <p id="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </dialog>
+
+    <script type="module" src="js/pages/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Review — Queensland Nations Community Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages/sandbox_typography.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <span class="site-header__logo">Queensland Nations Community Hub</span>
+            <nav class="site-header__nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Stories</a>
+                <a href="#">Events</a>
+                <a href="#">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+    
+        <section class="demo-section">
+            <h1>Typography Review 1</h1>
+        </section>
+
+        <!-- What aligns with A2 -->
+        <section class="demo-section">
+            <h2>What aligns with A2</h2>
+            <ul class="list">
+                <li>Colours fully follow the A2 design system (terracotta <code>#994B2D</code>, ochre <code>#B6965B</code>, neutral background <code>#F2F0E8</code>).</li>
+                <li>The typography system (Quicksand + Noto Sans) and font size hierarchy remain unchanged.</li>
+                <li>The warm, non-commercial visual tone is consistent with the A2 design principles of respect, inclusivity, and cultural authenticity.</li>
+            </ul>
+        </section>
+
+        <!-- What does not align -->
+        <section class="demo-section">
+            <h2>What does not align</h2>
+            <ul class="list">
+                <li>Glassmorphism card style did not appear in A2 and is a newly introduced visual language.</li>
+                <li>The frosted glass background is more modern than the original solid-colour background in A2, representing a slight deviation from the original design. However, the colours still follow the colour palette established in A2.</li>
+            </ul>
+        </section>
+
+        <!-- Accessibility or readability concerns -->
+        <section class="demo-section">
+            <h2>Accessibility or readability concerns</h2>
+            <p>After reducing the card opacity, we need to verify whether the contrast between text and background still meets the WCAG standard. The input fields use a semi-transparent background, and readability may decrease in areas with darker frosted glass backgrounds. However, the current contrast is still very high and does not affect readability.</p>
+        </section>
+
+        <!-- Decision -->
+        <section class="demo-section">
+            <h2>Decision</h2>
+            <div class="card callout">
+                <p>The frosted glass background and glassmorphism cards will be retained, but it is necessary to confirm that the text contrast meets the required standards.</p>
+            </div>
+        </section>
+
+        <!-- Issues found -->
+        <section class="demo-section">
+            <h2>Issues found on the typography sandbox page</h2>
+            <ul class="list">
+                <li>The heading sizes on mobile are too small, and the visual difference between H1 and H2 is not distinct enough.</li>
+                <li>The spacing between different headings and paragraphs is too narrow, which affects readability.</li>
+            </ul>
+        </section>
+
+        <!-- Cause and fix -->
+        <section class="demo-section">
+            <h2>Cause and recommended CSS changes</h2>
+            <p>The issue was caused by excessive compression of mobile font sizes in <code>_typography.css</code> — only a 0.2rem difference between H1, H2, and H3. Additionally, <code>margin: 0</code> in <code>_reset.css</code> removed all default spacing, which was not restored in <code>_typography.css</code>. This resulted in an unclear heading hierarchy and tightly packed text.</p>
+            <p>The fix involves adjusting <code>_typography.css</code> to increase the font size ratio for mobile devices and adding global margins for headings and paragraphs. Both issues will be fixed at once, with changes applied across all pages.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Queensland First Nations Community Hub</p>
+            <p><small>© 2026 DECO7140 | Hao Tang | 49450761 | A non-profit community platform</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>

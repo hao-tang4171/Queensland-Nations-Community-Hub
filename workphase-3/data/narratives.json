@@ -1,0 +1,52 @@
+{
+  "narratives": [
+    {
+      "id": 1,
+      "title": "A Performance at the Park",
+      
+      "author": "Demo Narrative",
+      "content": "I was walking through a park on the Gold Coast when I came across a group of First Nations dancers performing for the crowd. The rhythm stayed with me long after, and I wanted to keep a record of it. But I did not simply hold up my phone. I waited until the performance ended, went over, and asked the performers whether they would mind being recorded and whether the recording could be shared. Only once they agreed did I press record. Later I learned that Queensland once had more than a hundred Aboriginal and Torres Strait Islander languages, and today fewer than twenty are still spoken as a first language. That number stayed with me too. Recording is not just about capturing a moment — it is about asking first, and understanding why the moment matters.",
+      "audio_url": "audio/story-1.m4a",
+      "transcript": "I was walking through a park on the Gold Coast when I came across a group of First Nations dancers performing for the crowd. The rhythm stayed with me long after, and I wanted to keep a record of it. But I did not simply hold up my phone. I waited until the performance ended, went over, and asked the performers whether they would mind being recorded and whether the recording could be shared. Only once they agreed did I press record. Later I learned that Queensland once had more than a hundred Aboriginal and Torres Strait Islander languages, and today fewer than twenty are still spoken as a first language. That number stayed with me too. Recording is not just about capturing a moment — it is about asking first, and understanding why the moment matters.",
+      "image_url": "images/story-1.png",
+      "image_alt": "An open park on the Gold Coast with people gathered to watch a cultural performance.",
+      "note": "Fictional narrative for course demonstration. The decline of Queensland's Indigenous languages (from over 100 to fewer than 20 spoken as a first language) is real and verifiable; the speaker and events are invented."
+    },
+    {
+      "id": 2,
+      "title": "The Community's Digital Archive",
+      
+      "author": "Demo Narrative",
+      "content": "A few of us helped build a small digital archive of community materials, and we looked to larger institutions to learn how to do it well. The Queensland Museum, for example, cares for more than twenty-six thousand Torres Strait Islander objects, and it works directly with Traditional Owners and their communities to decide how those objects are accessed and shared. We tried to follow the same principle at our own small scale. We scanned old photographs and added a short note to every recording so people would know who was speaking and why. The hardest part was never the scanning. It was deciding who has the right to say which materials can be shared — and making sure that decision always rested with the community, not with us.",
+      "audio_url": "audio/story-2.m4a",
+      "transcript": "A few of us helped build a small digital archive of community materials, and we looked to larger institutions to learn how to do it well. The Queensland Museum, for example, cares for more than twenty-six thousand Torres Strait Islander objects, and it works directly with Traditional Owners and their communities to decide how those objects are accessed and shared. We tried to follow the same principle at our own small scale. We scanned old photographs and added a short note to every recording so people would know who was speaking and why. The hardest part was never the scanning. It was deciding who has the right to say which materials can be shared — and making sure that decision always rested with the community, not with us.",
+      "image_url": "images/story-2.png",
+      "image_alt": "A quiet workspace with a scanner, stacked photo albums, and a laptop.",
+      "note": "Fictional narrative for course demonstration. The Queensland Museum's Torres Strait Islander collection of 26,000+ objects and its community-led access model are real; the speaker and the small archive are invented."
+    },
+    {
+      "id": 3,
+      "title": "A Story About the Stars",
+   
+      "author": "Demo Narrative",
+      "content": "My grandfather knew a traditional story about the stars. It belongs to his people, and it is not ours to tell to outsiders. When we worked with an archive to preserve our family's materials, people assumed we would want the story written down and made available. We did not. Instead, with the permission of the Traditional Owners, we recorded only that the story exists, who it belongs to, and who holds the responsibility of keeping it. The story itself stays within the community. What we archived was its existence and its custodianship — not its content. Some knowledge is protected best by recording that it must be protected at all.",
+      "audio_url": "audio/story-3.m4a",
+      "transcript": "My grandfather knew a traditional story about the stars. It belongs to his people, and it is not ours to tell to outsiders. When we worked with an archive to preserve our family's materials, people assumed we would want the story written down and made available. We did not. Instead, with the permission of the Traditional Owners, we recorded only that the story exists, who it belongs to, and who holds the responsibility of keeping it. The story itself stays within the community. What we archived was its existence and its custodianship — not its content. Some knowledge is protected best by recording that it must be protected at all.",
+      "image_url": "images/story-3.png",
+      "image_alt": "A night sky full of stars over a dark, quiet landscape.",
+      "note": "Fictional narrative for course demonstration. It deliberately does not reproduce any real traditional story. The principle of recording a story's existence and custodianship rather than its content reflects real cultural-heritage practice; the speaker and family are invented."
+    },
+    {
+      "id": 4,
+      "title": "A Resident's View on the Heritage Act",
+      
+      "author": "Demo Narrative",
+      "content": "As someone whose family has lived on this Country for generations, I have mixed feelings about Queensland's Aboriginal Cultural Heritage Act 2003. On paper, it does something important: it places a duty of care on every land user in the State — anyone whose work might disturb our heritage has a legal responsibility to avoid harming it, no matter who owns the land. I value that the Act keeps secret and sacred objects under our ownership, not the State's. That recognition matters. But a law on paper is not the same as protection on the ground. Sites are still damaged, and many of us feel the duty of care is easy to sign off and hard to enforce. In 2019 the government began reviewing these laws to make them stronger, and years later we are still waiting. For me, the Act is a real step — but it is the floor, not the ceiling. Protecting culture means giving the people whose heritage it is the final say, not just a seat at the table.",
+      "audio_url": "audio/story-4.m4a",
+      "transcript": "As someone whose family has lived on this Country for generations, I have mixed feelings about Queensland's Aboriginal Cultural Heritage Act 2003. On paper, it does something important: it places a duty of care on every land user in the State — anyone whose work might disturb our heritage has a legal responsibility to avoid harming it, no matter who owns the land. I value that the Act keeps secret and sacred objects under our ownership, not the State's. That recognition matters. But a law on paper is not the same as protection on the ground. Sites are still damaged, and many of us feel the duty of care is easy to sign off and hard to enforce. In 2019 the government began reviewing these laws to make them stronger, and years later we are still waiting. For me, the Act is a real step — but it is the floor, not the ceiling. Protecting culture means giving the people whose heritage it is the final say, not just a seat at the table.",
+      "image_url": "images/story-4.png",
+      "image_alt": "A Queensland landscape with open land meeting the sky.",
+      "note": "Fictional resident's perspective written for course demonstration. The Aboriginal Cultural Heritage Act 2003 (Qld), its statutory duty of care, its provisions for secret and sacred objects, and the 2019 government review of the Act are all real and verifiable. The speaker is invented and does not represent any real person or community."
+    }
+  ]
+}

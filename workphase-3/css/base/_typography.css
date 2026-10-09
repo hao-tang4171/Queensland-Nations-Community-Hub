@@ -1,0 +1,30 @@
+/* Mobile first */
+html {
+    background-color: #F7F5EE;
+    background-image:
+        radial-gradient(ellipse 60% 50% at 15% 15%, rgba(153, 75, 45, 0.35) 0%, transparent 100%),
+        radial-gradient(ellipse 55% 45% at 85% 85%, rgba(182, 150, 91, 0.40) 0%, transparent 100%),
+        radial-gradient(ellipse 40% 35% at 70% 5%,  rgba(220, 160, 80, 0.28) 0%, transparent 100%);
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1.125rem;
+    line-height: var(--line-height-body);
+    color: var(--color-text);
+    min-height: 100vh;
+    background: transparent;
+}
+
+h1 { font-size: 1.6rem; line-height: var(--line-height-heading); }
+h2 { font-size: 1.4rem; line-height: var(--line-height-heading); }
+h3 { font-size: 1.2rem; line-height: var(--line-height-heading); }
+small { font-size: var(--size-small); }
+
+@media (min-width: 768px) {
+    h1 { font-size: var(--size-h1); }
+    h2 { font-size: var(--size-h2); }
+    h3 { font-size: var(--size-h3); }
+}

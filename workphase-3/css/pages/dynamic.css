@@ -1,0 +1,34 @@
+@import "../base/_reset.css";
+@import "../base/_variables.css";
+@import "../base/_typography.css";
+@import "../components/_card.css";
+
+.site-header { background: rgba(247,245,238,0.80); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1.5px solid rgba(255,255,255,0.60); padding: 1rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(61,53,45,0.08); }
+.site-header__inner { display: flex; flex-direction: column; gap: 0.75rem; max-width: 1100px; margin: 0 auto; }
+.site-header__logo { font-weight: 600; font-size: 1.1rem; color: var(--color-primary); }
+.site-header__nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.site-header__nav a { color: var(--color-text); text-decoration: none; font-weight: 500; }
+.site-header__nav a:hover { color: var(--color-primary); text-decoration: underline; }
+.site-header__nav a[aria-current="page"] { color: var(--color-primary); font-weight: 600; }
+@media (min-width: 768px) { .site-header__inner { flex-direction: row; justify-content: space-between; align-items: center; } }
+
+.posts-intro { text-align: center; max-width: 700px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+.posts-intro h1 { color: var(--color-primary); margin-bottom: 0.75rem; }
+.posts-intro__notice { font-size: 0.85rem; color: rgba(61,53,45,0.7); font-style: italic; margin-top: 0.5rem; }
+
+.posts-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; padding: 1rem 1.5rem 3rem; }
+@media (min-width: 720px) { .posts-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.post-card { display: flex; flex-direction: column; gap: 0.6rem; }
+.post-card__image { width: 100%; height: 180px; object-fit: cover; border-radius: 0.75rem; background: rgba(61,53,45,0.06); }
+.post-card__type { align-self: flex-start; background: rgba(153,75,45,0.10); color: var(--color-primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.2rem 0.6rem; border-radius: 999px; }
+.post-card__title { color: var(--color-primary); margin: 0; font-size: 1.15rem; }
+.post-card__date { font-size: 0.85rem; color: var(--color-secondary); font-weight: 600; margin: 0; }
+.post-card__content { margin: 0; }
+
+.post-status { max-width: 600px; margin: 2rem auto; text-align: center; }
+.post-status--error { color: var(--color-primary); }
+
+.site-footer { background-color: var(--color-primary); padding: 2rem 1.5rem; margin-top: 3rem; }
+.site-footer__inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.site-footer p { color: var(--color-bg-light); margin-bottom: 0.5rem; }
